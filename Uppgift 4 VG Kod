@@ -1,6 +1,55 @@
 Koden till A)
 
 
+#include <stdio.h>
+
+int main(void)
+{
+    double data[] = { 7, 0.5, 2, 0.3, 0.1, 0.0, -10, 528.2, 8.0, 7.2, 2.3, 1100, 222 };
+	
+	double length = 13;
+
+	for (int i = 0; i < length; i++)
+	{
+		for (int f = 0; f < (length - 1); f++)
+		{
+			if (data[f] < data[f + 1])
+			{
+				double temp1 = data[f]; 
+				data[f] = data[f + 1];
+				data[f + 1] = temp1;		 
+     	}
+	  }
+	}
+
+	for (int i = 0; i < length; i++)
+
+	printf("data[%d] = %lg\n", i, data[i]);
+
+	return 0;
+}
+
+Svar på B)
+
+Utskrift:
+data[0] = 1100
+data[1] = 528.2
+data[2] = 222
+data[3] = 8
+data[4] = 7.2
+data[5] = 7
+data[6] = 2.3
+data[7] = 2
+data[8] = 0.5
+data[9] = 0.3
+data[10] = 0.1
+data[11] = 0
+data[12] = -10
+
+
+
+Svar på C)
+
 
 #include <stdio.h>
 
@@ -30,13 +79,7 @@ int main(void)
 	return 0;
 }
 
-
-
-
-
-
-
-Svar på B)
+Svar på D)
 
 Utskrift:
 data[0] = -10
@@ -53,53 +96,6 @@ data[10] = 222
 data[11] = 528.2
 data[12] = 1100
 
-Svar på C)
-
-#include <stdio.h>
-
-int main(void)
-{
-    double data[] = { 7, 0.5, 2, 0.3, 0.1, 0.0, -10, 528.2, 8.0, 7.2, 2.3, 1100, 222 };
-	
-	double length = 13;
-
-	for (int i = 0; i < length; i++)
-	{
-		for (int f = 0; f < (length - 1); f++)
-		{
-			if (data[f] < data[f + 1])
-			{
-				double temp1 = data[f]; 
-				data[f] = data[f + 1];
-				data[f + 1] = temp1;		 
-     	}
-	  }
-	}
-
-	for (int i = 0; i < length; i++)
-
-	printf("data[%d] = %lg\n", i, data[i]);
-
-	return 0;
-}
 
 //Det enda som behöver ändras i koden är strängen "if(data[f] > data[f + 1])"
-//Där > blir till <
-
-
-Svar på D)
-
-data[0] = 1100
-data[1] = 528.2
-data[2] = 222
-data[3] = 8
-data[4] = 7.2
-data[5] = 7
-data[6] = 2.3
-data[7] = 2
-data[8] = 0.5
-data[9] = 0.3
-data[10] = 0.1
-data[11] = 0
-data[12] = -10
-
+//Där < blir till >
